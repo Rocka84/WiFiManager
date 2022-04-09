@@ -76,6 +76,7 @@ class WiFiManager
 
     boolean       autoConnect();
     boolean       autoConnect(char const *apName, char const *apPassword = NULL);
+    int           connectWifi(String ssid, String pass);
 
     //if you want to always start the config portal, without trying to connect first
     boolean       startConfigPortal();
@@ -157,7 +158,6 @@ class WiFiManager
     //void          setEEPROMString(int start, int len, String string);
 
     int           status = WL_IDLE_STATUS;
-    int           connectWifi(String ssid, String pass);
     uint8_t       waitForConnectResult();
 
     void          handleRoot();
